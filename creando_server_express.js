@@ -1,6 +1,10 @@
 const express = require ('express');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Escuchando en puerto ${ PORT }`);
+});
+
 
 
 //motor de plantillas // se configura diferente en EJS o HBS
@@ -29,9 +33,9 @@ app.get('/elements',(req,res)=>{
 });
 
 //SERVER EN ESCUCHA
-app.listen(port, ()=>{
+/* app.listen(port, ()=>{
     console.log('Escuchando');
-});
+}); */
 
 
 //middleware con RENDER
