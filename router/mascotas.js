@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
         const arrayPets = await pet.find()
         
         res.render('mascotas', {
-            arrayMascotas:arrayPets  
+            arrayPets:arrayPets  
         });
         
     }catch (err) {
