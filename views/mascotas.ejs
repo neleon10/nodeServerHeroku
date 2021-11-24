@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Road Trip by Mascotas</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<div class="logo"><a href="/">Road Trip <span>by Mascotas</span></a></div>
+		<a href="#menu"><span>Menu</span></a>
+	</header>
+
+	<%- include('templates/nav') %>
+
+	<div class="container" style="margin-top: 200px;">
+		<!-- Table mascotas -->
+		
+		<h4>Mascotas</h4>
+			<table class="table table-bordered table-striped text-center mt-4">
+				<thead>
+				  <tr class="bg-primary text-white">
+					  <th scope="col">ID</th>
+					  <th scope="col">Nombre</th>
+					  <th scope="col">Descripton</th>
+					  <!-- <th scope="col">ACCIONES</th> -->
+				  </tr>
+				</thead>
+				<tbody>
+  
+					  <% arrayMascotas.forEach(pet => { %>                  
+						<tr>  
+							<td><%= pet.id %>  </td>
+							<td><%= pet.nombrep %> </td>
+							<td><%= pet.description %> </td>
+						</tr>                 
+					  <% }); %>
+				</tbody>
+			</table>
+  
+		</div>
+
+	</div>
+
+
+
+	<%- include('templates/footer') %>
+
+</body>
+
+</html>
