@@ -17,6 +17,9 @@ app.listen(PORT, () => {
 app.set('views',__dirname + '/views');
 app.set ('view engine','ejs');
 
+//Es para leer archivos como el BodyParser.
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 //DECLARO CARPETA "PUBLIC" PARA ARCHIVOS ESTATICOS
 app.use(express.static(__dirname + "/public"));

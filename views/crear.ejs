@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title><%= nombresolapa %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body>
+    <!-- some styles -->
+    <style>
+        .createForm {
+            margin-top: 100px;
+        }
+
+        .createForm input {
+            margin: 1rem;
+            width: 80%;
+
+        }
+        .btnDiv{
+            margin-left: 1rem;
+        }
+        .inputPet a{
+            text-decoration: none;
+        }
+    </style>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><a href="/">Road Trip <span>by <%= nombre %></span></a></div>
+        <a href="#menu"><span>Menu</span></a>
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/servicios">Servicios</a></li>
+                <li><a href="/elements">ElementosHTML</a></li>
+                <li><a href="/mascotas">Mascotas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- insert pet form  -->
+    <div class="createForm">
+        <form action="/mascotas" method="POST">
+            <!-- inputs -->
+            <input type="text" name="nombrep" placeholder="Ingrese nombre de mascota">
+            <input type="text" name="description" placeholder="Describe tu mascota">
+            <!-- buttons -->
+            <div class="btnDiv">
+                <button type="submit" class="btn btn-primary inputPet">Create</button>
+                <button class="btn btn-primary inputPet" ><a href="/mascotas">Cancelar</a></button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</html>
